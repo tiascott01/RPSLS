@@ -1,6 +1,6 @@
 body {
-  margin: 0vh;
-  padding: 0vh;
+  margin: 0;
+  padding: 0;
   font-family: 'Lato', sans-serif;
   display: flex;
   flex-direction: column;
@@ -32,8 +32,8 @@ main {
 /* dash Styles */
 .dash-container {
   position: relative;
-  padding: .5vh;
-  border-radius: 2.5vh;
+  padding: 5px;
+  border-radius: 25px;
   overflow: hidden;
   width: 60%;
   height: 79vh;
@@ -49,7 +49,7 @@ main {
   bottom: 0;
   background: linear-gradient(135deg, #FFFFFF, #B4BBDF, #7BBCC6, #6073B7, #465FAB);
   z-index: -1;
-  border-radius: 2.5vh;
+  border-radius: 25px;
 }
 
 #dash {
@@ -61,9 +61,100 @@ main {
   background-image: url('../../Images/dashboard.jpg');
   background-size: cover;
   background-position: center;
-  border-radius: 2vh;
+  border-radius: 20px;
 }
 
+/*{PAUSE BUTTON*/
+/*////////////////////////////////////////////////////////////////////////*/
+
+.pause-button-box {
+  position: absolute;
+  bottom: 13%;
+  left: 81%; /* Align with the middle of the screen */
+}
+
+.pause-button-box button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.pause-button-box button img {
+  width: 6vh; /* Adjust the width of the pause button image */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/*SEND TO A FRIEND*/
+/*////////////////////////////////////////////////////////////////////////*/
+
+/* Popup Container */
+.popup-container {
+  display: none;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 400px;
+  width: 90%;
+  padding: 20px;
+  background-color: #fefefe;
+  z-index: 9999; /* Ensure it's above the overlay */
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+/* Form Styles */
+form {
+  margin-top: 2vh;
+  margin-bottom: 5vh;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  position: absolute;
+  bottom: 2vh;
+  right: 2vh;
+  background-color: #0f132f;
+  color: white;
+  padding: 14px 20px;
+  border: 1px solid #0f132f;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #5e71b6
+}
+
+input[type="submit"]:focus {
+  outline: none;
+}
 
 /*ABOUT PAGE PROPERTIES*/
 /*////////////////////////////////////////////////////////////////////////*/
@@ -76,13 +167,13 @@ main {
   background-image: url('../../Images/dashboard_about.png');
   background-size: cover;
   background-position: center;
-  border-radius: 2vh;
+  border-radius: 20px;
 }
 
 #aboutHeader {
   display: flex;
   height: 16.25vh;
-  padding: 0vh;
+  padding: 0px;
 }
 
 .about-title {
@@ -101,6 +192,11 @@ main {
   align-items: center;
   height: 45%;
   margin-top: 6vh;
+  font-size: 40px;
+  font-weight: bold;
+  color: #FFFFFF;
+  box-sizing: border-box;
+  letter-spacing: 2px;
 }
 
 #aboutDescription {
@@ -127,16 +223,16 @@ main {
 .about-column#aboutText > p {
   text-align: center;
   margin-left: 5vh;
-  margin-right: 5vh;
+  margin-right: 12vh;
   color: #ffffff;
-  font-size: 2.75vh;
+  font-size: 26px;
 }
 
 .about-column#aboutText > ul {
   color: #ffffff;
-  font-size: 2.75vh;
-  margin-top: 1vh;
-  line-height: 5vh;
+  font-size: 26px;
+  margin-top: 10px;
+  line-height: 1.75;
   margin-right: 7vh;
 }
 
@@ -146,13 +242,13 @@ main {
   right: 4vh;
   background-color: #939598;
   color: white;
-  padding: 1.5vh 2vh;
-  border: .09vh solid #939598;
+  padding: 14px 20px;
+  border: 1px solid #939598;
   cursor: pointer;
-  border-radius: .6vh;
+  border-radius: 5px;
   font-family: 'Lato', sans-serif;
-  font-size: 1.1vh;
-  letter-spacing: .09vh;
+  font-size: 12px;
+  letter-spacing: 1px;
   transition: background-color 0.3s ease;
 }
 
@@ -168,7 +264,7 @@ main {
 }
 
 .about-column {
-  margin-bottom: 2vh;
+  margin-bottom: 20px;
 }
 
 #imageThumb {
@@ -180,7 +276,7 @@ main {
   height: auto;
 }
 
-/*RULES PAGE PROPERTIES - DONE*/
+/*RULES PAGE PROPERTIES*/
 /*////////////////////////////////////////////////////////////////////////*/
 
 #rules {
@@ -191,13 +287,13 @@ main {
   background-image: url('../../Images/dashboard_rules.png');
   background-size: cover;
   background-position: center;
-  border-radius: 2vh;
+  border-radius: 20px;
 }
 
 #ruleHeader {
   display: flex;
   height: 16.25vh;
-  padding: 0vh;
+  padding: 0px;
 }
 
 .rule-title {
@@ -229,6 +325,11 @@ main {
   align-items: center;
   height: 45%;
   margin-top: 6vh;
+  font-size: 40px;
+  font-weight: bold;
+  color: #FFFFFF;
+  box-sizing: border-box;
+  letter-spacing: 2px;
 }
 
 #yourButtonId {
@@ -237,13 +338,13 @@ main {
   right: 4vh;
   background-color: #0f132f;
   color: white;
-  padding: 1.5vh 2vh;
-  border: .09vh solid #0f132f;
+  padding: 14px 20px;
+  border: 1px solid #0f132f;
   cursor: pointer;
-  border-radius: .6vh;
+  border-radius: 5px;
   font-family: 'Lato', sans-serif;
-  font-size: 1.1vh;
-  letter-spacing: .09vh;
+  font-size: 12px;
+  letter-spacing: 1px;
   transition: background-color 0.3s ease;
 }
 
@@ -278,6 +379,11 @@ main {
   align-items: center;
   height: 45%;
   margin-top: 6vh;
+  font-size: 40px;
+  font-weight: bold;
+  color: #FFFFFF;
+  box-sizing: border-box;
+  letter-spacing: 2px;
 }
 
 #writtenText {
@@ -294,27 +400,27 @@ main {
   margin-left: 5vh;
   margin-right: 12vh;
   color: #ffffff;
-  font-size: 2.5vh;
-  line-height: 3.5vh;
+  font-size: 26px;
+  line-height: 1.5;
 }
 
 .rules-column#writtenText > ul {
   color: #ffffff;
-  font-size: 2vh;
-  margin-top: 1vh;
+  font-size: 20px;
+  margin-top: 10px;
   line-height: 1.75;
   margin-right: 7vh;
 }
 
-/*VIDEO POP UP - DONE*/
+/*VIDEO POP UP*/
 /*////////////////////////////////////////////////////////////////////////*/
 
 
 .popup {
   display: none;
   position: fixed;
-  top: 0vh;
-  left: 0vh;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
@@ -337,8 +443,8 @@ main {
 
 #video, #play-button {
   position: absolute;
-  top: 0vh;
-  left: 0vh;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: transparent;
@@ -349,9 +455,9 @@ main {
   position: absolute;
   top: 7vh;
   right: 2vh;
-  width: 4vh;
-  height: 4vh;
-  font-size: 4vh;
+  width: 30px;
+  height: 30px;
+  font-size: 40px;
   background-color: transparent;
   border: none;
   color: #fff;
@@ -360,8 +466,8 @@ main {
 }
 
 #play-button {
-  width: 10vh;
-  height: 10vh;
+  width: 100px;
+  height: 100px;
   background-image: url('../../Images/playvideo.png');
   background-size: cover;
   cursor: pointer;
@@ -373,13 +479,13 @@ main {
   transform: translate(-50%, -50%);
 }
 
-/*SCOREBOARD - DONE*/
+/*SCOREBOARD*/
 /*////////////////////////////////////////////////////////////////////////*/
 
 #score {
   display: flex;
   height: 16.25vh;
-  padding: 0vh;
+  padding: 0px;
 }
 
 .score-part {
@@ -388,7 +494,7 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 0vh;
+  margin: 0px;
   height: 100%;
 }
 
@@ -404,7 +510,7 @@ main {
 #playerScoreSection .player-image {
   max-width: 60%;
   height: auto;
-  margin-bottom: .85vh;
+  margin-bottom: 10px;
 }
 
 .player-score-box {
@@ -413,10 +519,10 @@ main {
   align-items: center;
   width: 50%;
   height: 45%;
-  padding-bottom: .1vh;
-  border: .2vh solid #616b8a;
-  margin-top: .85vh;
-  font-size: 5.5vh;
+  padding-bottom: 2px;
+  border: 2px solid #616b8a;
+  margin-top: 8px;
+  font-size: 60px;
   font-weight: bold;
   color: #FFFFFF;
   box-sizing: border-box;
@@ -426,7 +532,7 @@ main {
   flex: 2;
   font-weight: bold;
   color: #5C67AF;
-  font-size: 4vh;
+  font-size: 40px;
 }
 
 #computerScoreSection {
@@ -441,7 +547,7 @@ main {
 #computerScoreSection .computer-image {
   max-width: 60%;
   height: auto;
-  margin-bottom: .85vh;
+  margin-bottom: 10px;
 }
 
 .computer-score-box {
@@ -450,16 +556,16 @@ main {
   align-items: center;
   width: 50%;
   height: 45%;
-  padding-bottom: .1vh;
-  border: .2vh solid #616b8a;
-  margin-top: .85vh;
-  font-size: 5.5vh;
+  padding-bottom: 2px;
+  border: 2px solid #616b8a;
+  margin-top: 8px;
+  font-size: 60px;
   font-weight: bold;
   color: #FFFFFF;
   box-sizing: border-box;
 }
 
-/*RSPLS HANDS AND ANIMATION - DONE*/
+/*RSPLS HANDS AND ANIMATION*/
 /*////////////////////////////////////////////////////////////////////////*/
 
 #hands {
@@ -476,14 +582,14 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 0vh;
-  padding: 0vh;
+  margin: 0px;
+  padding: 0px;
 }
 
 #playerHand {
   flex: 1.85;
   overflow: hidden;
-  padding-top: 4.8vh;
+  padding-top: 50px;
 }
 
 @keyframes swingAndChange {
@@ -507,7 +613,7 @@ main {
   position: absolute;
   top: 0;
   width: 100%;
-  padding-top: 1.9vh;
+  padding-top: 20px;
 }
 
 .text-container {
@@ -517,11 +623,11 @@ main {
 .time {
   font-weight: bold;
   color: white;
-  font-size: 4.375vh;
+  font-size: 45px;
 }
 
 .description {
-  font-size: 1.75vh;
+  font-size: 18px;
   color: #5C67AF;
 }
 
@@ -529,10 +635,10 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 9vh;
+  height: 100px;
   width: 100%;
   overflow: hidden;
-  transform: translateY(2.7vh);
+  transform: translateY(30px);
 }
 
 .status-image {
@@ -544,7 +650,7 @@ main {
 #computerHand {
   flex: 1.85;
   overflow: hidden;
-  padding-top: 4.8vh;
+  padding-top: 50px;
 }
 
 @keyframes computerHandAnimation {
@@ -560,7 +666,7 @@ main {
   animation: computerHandAnimation 1.5s ease-in-out forwards;
 }
 
-/*ICONS AND ANIMATION - DONE*/
+/*ICONS AND ANIMATION*/
 /*////////////////////////////////////////////////////////////////////////*/
 
 #choice {
@@ -572,7 +678,7 @@ main {
 .choice-column {
   flex: 1;
   display: flex;
-  padding: .85vh;
+  padding: 10px;
   height: 100%;
   flex-direction: column;
   align-items: center;
@@ -580,10 +686,10 @@ main {
 }
 
 .choice-column p {
-  font-size: 1.9vh;
-  letter-spacing: .05vh;
-  padding: .85vh;
-  margin: 0vh 0vh .5vh 0vh;
+  font-size: 20px;
+  letter-spacing: .25px;
+  padding: 10px;
+  margin: 0 0 8px 0;
 }
 
 .invisible {
@@ -600,18 +706,16 @@ main {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding-left: 0vh;
+  padding-left: 0px;
 }
 
 .icon {
-  width: 8.8vh;
-  height: 10.8vh;
+  width: 90px;
+  height: 115px;
   background-size: cover;
   display: block;
   cursor: pointer;
-  margin: .8vh .89vh .8vh 0vh;
-  align-self: flex-end; /* Align icons to the bottom */
-  flex-grow: 1; /* Make icons take up available space */ 
+  margin: 0px 10px 8px 0px; 
 }
 
 
@@ -621,12 +725,12 @@ main {
   align-items: center;
   flex: 0.5;
   text-align: center;
-  font-size: 1.9vh;
-  letter-spacing: .05vh;
+  font-size: 20px;
+  letter-spacing: .25px;
   height: 100%;
 }
 
-/*DOT ANIMATION - DONE*/
+/*DOT ANIMATION*/
 /*////////////////////////////////////////////////////////////////////////*/
 
 .dot {
@@ -651,7 +755,7 @@ main {
   50% { opacity: 0; }
 }
 
-/*FOOTER STYLES - FOOTER ICON SIZE*/
+/*FOOTER STYLES*/
 /*////////////////////////////////////////////////////////////////////////*/
 
 .footer-content {
@@ -662,10 +766,8 @@ main {
 }
 
 .footer-img {
-  margin-right: 2vh;
+  margin-right: 20px;
   position: relative;
-  top: -3vh;
-  right: -3vh;
+  top: -30px;
+  right: -30px;
 }
-
-

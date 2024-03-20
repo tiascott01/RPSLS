@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>RPSLS - The Ultimate Game</title>
     <!-- Favicon -->
     <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
     <!-- Favicon -->
     <!-- Font LATO CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
     <!-- External CSS -->
     <link rel="stylesheet" type="text/css" href="static/css/styles.css">
@@ -39,7 +38,7 @@
                 <div id="hands">
                     <div class="hand-column" id="playerHand">
                         <!-- Initial image for the animation -->
-                        <img src="Images/pstatushand.png" alt="Status Hand" id="playerHandImage">
+                        <img src="Images/pstatushand.png" alt="Status Hand" id="playerHandImage" style="width: 100%;">
                     </div>
                     <div class="hand-column" id="status">
                         <div id="timer">
@@ -54,7 +53,7 @@
                     </div>
                     <div class="hand-column" id="computerHand">
                         <!-- Initial image for the animation -->
-                        <img src="Images/cstatushand.png" alt="Status Hand" id="computerHandImage">
+                        <img src="Images/cstatushand.png" alt="Status Hand" id="computerHandImage" style="width: 100%;">
                     </div>
                 </div>
                 <div id="choice">
@@ -79,24 +78,6 @@
     </main>
 
 
-
-<!-- Popup Container -->
-<div id="popupContainer" class="popup-container">
-    <div class="popup-content">
-        <span class="close-btn" onclick="closePopup()">&times;</span>
-        <img src="Images/logo.png" alt="Image Description"><br><br>
-        <img src="Images/friends.png" alt="play">
-        <form action="mailto:recipient@example.com" method="post" enctype="text/plain">
-            <label for="senderName">Your Name:</label><br>
-            <input type="text" id="senderName" name="senderName" required><br>
-            <label for="senderEmail">Your Email:</label><br>
-            <input type="email" id="senderEmail" name="senderEmail" required><br>
-            <label for="recipientEmail">Friend's Email:</label><br>
-            <input type="email" id="recipientEmail" name="recipientEmail" required><br>
-            <input type="submit" value="SEND">
-        </form>
-    </div>
-</div>
     <!-- /////////////////////////////////////////////////////// -->
 
  
@@ -248,17 +229,17 @@
       <!-- /////////////////////////////////////////////////////// -->
           <!-- Your existing footer -->
           <footer>
-              <div class="footer-content">
-                  <a href="../ROOT/rules.html">
-                      <img src="Images/play.png" alt="Rock Paper Scissors Lizard Spock Rules" class="footer-img">
-                  </a>
-                  <a href="#" onclick="showPopup()">
-                      <img src="Images/send.png" alt="Send to a Friend" class="footer-img">
-                  </a>
-                  <a href="../ROOT/about.html">
-                      <img src="Images/about.png" alt="About the Creators" class="footer-img">
-                  </a>
-              </div>
-          </footer>
-      </body>
-      </html>
+            <div class="footer-content">
+                <a href="../rules.html">
+                    <img src="Images/play.png" alt="Rock Paper Scissors Lizard Spock Rules" class="footer-img" style="width: 100%;">
+                </a>
+                <a href="../about.html">
+                    <img src="Images/about.png" alt="About the Creators" class="footer-img" style="width: 100%;">
+                </a>
+                <a href="../data.html">
+                    <img src="Images/data.png" alt="About the Creators" class="footer-img" style="width: 100%;">
+                </a>
+            </div>
+        </footer>
+    </body>
+    </html>
